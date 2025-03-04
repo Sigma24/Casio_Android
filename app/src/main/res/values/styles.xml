@@ -4,9 +4,10 @@
     <style name="graphs">
         <item name="android:layout_width">110dp</item>
         <item name="android:layout_height">45dp</item>
-        <item name="android:layout_marginLeft">85dp</item>
+        <item name="android:layout_marginLeft">70dp</item>
         <item name="android:background">@drawable/graph</item>
         <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
 
 
 
@@ -19,17 +20,26 @@
 
 
     <style name="CalcModeButton">
-        <item name="android:layout_width">50dp</item>
-        <item name="android:layout_height">20dp</item>
-
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">34dp</item>
         <item name="android:layout_marginTop">5dp</item>
-        <item name="android:layout_marginStart">5dp</item>
-        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:layout_marginStart">2dp</item> <!-- Reduced margin -->
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_marginBottom">6dp</item><!-- Reduced margin -->
 
-        <item name="android:background">@drawable/button_capsule</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/button_text</item>
+        <item name="android:textSize">12sp</item> <!-- Increased for better readability -->
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:letterSpacing">-0.08</item> <!-- Further reduces spacing between letters -->
+        <item name="android:scaleX">0.85</item> <!-- Slightly reduce width to fit -->
+        <item name="android:ellipsize">none</item>
+        <item name="android:paddingStart">0dp</item> <!-- Removes extra padding -->
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+
     </style>
+
+
 
     <style name="TopFunctionButton">
         <item name="android:layout_width">55dp</item>

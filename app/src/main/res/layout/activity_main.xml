@@ -31,12 +31,12 @@ android:padding="8dp"
     android:layout_marginTop="6dp"
     android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_deg"
-        style="@style/CalcModeButton"
-        android:text="DEG"/>
+        <Button
+            android:id="@+id/btn_deg"
+            style="@style/CalcModeButton"
+            android:text="DEG" />
 
-    <Button
+        <Button
         android:id="@+id/btn_grad"
         style="@style/CalcModeButton"
         android:text="GRAD"/>
@@ -44,7 +44,7 @@ android:padding="8dp"
     <Button
         android:id="@+id/btn_rad"
         style="@style/CalcModeButton"
-        android:text="RAD"/>
+        android:text="-"/>
 
         <Button
             android:id="@+id/btn_graph"

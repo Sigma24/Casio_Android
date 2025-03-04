@@ -13,16 +13,68 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val bind = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bind.root)
-     var shiftkey=0
+        var  modetype="degree";
+        var shiftkey=0
+        var alpha=0
 
-        bind.btnDeg.setOnClickListener {}
+
+
+
+
+
+
+
+        bind.btnDeg.setOnClickListener {
+            when(modetype){
+                "degree"->{
+                    modetype="radian"
+                    bind.btnDeg.text="RAD"
+                }
+                "radian"->{
+                    modetype="gradian"
+                    bind.btnDeg.text="GRAD"
+                }
+                "gradian"->{
+                    modetype="degree"
+                    bind.btnDeg.text="DEG"
+                }
+            }
+
+        }
+
+
+
+
+
         bind.btnGrad.setOnClickListener {}
         bind.btnRad.setOnClickListener {}
-       bind.shift.setOnClickListener {
-        shiftkey = if (shiftkey == 0) 1 else 0
-        Toast.makeText(this, "Shift Key State: $shiftkey", Toast.LENGTH_SHORT).show()
-       }
-        bind.alpha.setOnClickListener {}
+
+
+
+        bind.shift.setOnClickListener {
+            if (shiftkey == 1) {
+                shiftkey = 0
+                bind.btnRad.text = "-"
+            } else {
+                shiftkey = 1
+                alpha = 0
+                bind.btnRad.text = "S"
+            }
+            Toast.makeText(this, "Shift Key State: $shiftkey", Toast.LENGTH_SHORT).show()
+        }
+
+
+        bind.alpha.setOnClickListener {
+            if (alpha == 1) {
+                alpha = 0
+                bind.btnRad.text = "-"
+            } else {
+                alpha = 1
+                shiftkey = 0
+                bind.btnRad.text = "A"
+            }
+            Toast.makeText(this, "Alpha Key State: $alpha", Toast.LENGTH_SHORT).show()
+        }
         bind.left.setOnClickListener {}
         bind.right.setOnClickListener {}
         bind.down.setOnClickListener {}
