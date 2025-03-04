@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="graphs">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">85dp</item>
+        <item name="android:background">@drawable/graph</item>
+        <item name="android:layout_marginTop">5dp</item>
+
+
+
+
+
+
+
+
+    </style>
+
+
+    <style name="CalcModeButton">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">20dp</item>
+
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+
+        <item name="android:background">@drawable/button_capsule</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/button_text</item>
+    </style>
+
+    <style name="TopFunctionButton">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:background">@drawable/button_capsule_top</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/alt_function_text</item>
+    </style>
+
+    <style name="NumberButton">
+        <item name="android:layout_width">66dp</item>
+        <item name="android:layout_height">41dp</item>
+        <item name="android:layout_marginStart">7.1dp</item>
+        <item name="android:layout_marginEnd">7.1dp</item>
+
+
+        <!-- Vertical Spacing -->
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+
+        <item name="android:background">@drawable/button_capsule_top</item>
+        <item name="android:textColor">@color/button_text</item>
+    </style>
+
+    <style name="FunctionButton">
+        <item name="android:layout_width">66dp</item>
+        <item name="android:layout_height">40dp</item>
+
+        <!-- Horizontal spacing -->
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+
+        <!-- Vertical Spacing -->
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:layout_marginBottom">9dp</item>
+
+        <item name="android:background">@drawable/button_capsule_top</item>
+        <item name="android:textColor">@color/button_blue</item>
+    </style>
+
+
+    <style name="SpecialButton">
+        <item name="android:layout_width">66dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">7dp</item>
+        <item name="android:layout_marginEnd">7dp</item>
+
+        <!-- Vertical Spacing -->
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:layout_marginBottom">9dp</item>
+        <item name="android:background">@drawable/button_capsule_top</item>
+        <item name="android:textColor">@color/button_red</item>
+    </style>
+
+    <style name="ModeButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:background">@drawable/button_capsule_top</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/alt_function_text</item>
+    </style>
+
+
+
+
+</resources>
