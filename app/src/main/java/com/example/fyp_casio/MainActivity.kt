@@ -1,5 +1,6 @@
 package com.example.fyp_casio
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -18,8 +19,10 @@ class MainActivity : AppCompatActivity() {
         var alpha=0
 
 
-
-
+        bind.btnGraph.setOnClickListener {
+            val intent = Intent(this, Graphical_View::class.java)
+            startActivity(intent)
+        }
 
 
 

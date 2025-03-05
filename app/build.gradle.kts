@@ -50,10 +50,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation ("androidx.compose.material:material-icons-extended:1.4.3")
     implementation ("com.google.android.material:material:1.9.0")
-
-
-
-
-
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
 }
