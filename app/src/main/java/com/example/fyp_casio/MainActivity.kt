@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         var alpha=0
 
 
+
+
+
+
         bind.btnGraph.setOnClickListener {
             val intent = Intent(this, Graphical_View::class.java)
             startActivity(intent)
@@ -85,39 +89,220 @@ class MainActivity : AppCompatActivity() {
         bind.SandD.setOnClickListener{}
         bind.cal.setOnClickListener {}
         bind.ans.setOnClickListener {}
-        bind.clr.setOnClickListener {}
-        bind.sqr.setOnClickListener {}
-        bind.sqrt.setOnClickListener {}
+        bind.clr.setOnClickListener {
+            bind.display.text = ""
+        }
+        bind.pwr.setOnClickListener {
+        }
+        bind.sqr.setOnClickListener {
+
+            bind.display.text = bind.display.text.toString() + "²"
+        }
+        bind.sqrt.setOnClickListener {
+
+            bind.display.text = bind.display.text.toString() + "√"
+
+
+        }
         bind.by.setOnClickListener {}
-        bind.logpwr.setOnClickListener {}
-        bind.log.setOnClickListener {}
-        bind.ln.setOnClickListener {}
-        bind.neg.setOnClickListener {}
-        bind.dms.setOnClickListener {}
+        bind.logpwr.setOnClickListener {
+
+            bind.display.text = bind.display.text.toString() + "log ²"
+
+        }
+        bind.log.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "log"
+
+
+        }
+        bind.ln.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "ln"
+
+
+        }
+        bind.neg.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "-"
+
+
+        }
+        bind.dms.setOnClickListener {
+
+            bind.display.text = bind.display.text.toString() + "°"
+
+        }
         bind.hyp.setOnClickListener {}
         bind.sin.setOnClickListener {}
         bind.cos.setOnClickListener {}
         bind.tan.setOnClickListener {}
         bind.rcl.setOnClickListener {}
         bind.eng.setOnClickListener {}
-        bind.open.setOnClickListener {}
-        bind.close.setOnClickListener {}
+        bind.open.setOnClickListener {
+
+            bind.display.text = bind.display.text.toString() + "("
+
+
+        }
+        bind.close.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + ")"
+
+
+        }
         bind.M.setOnClickListener {}
-        bind.seven.setOnClickListener {}
-        bind.eight.setOnClickListener {}
-        bind.nine.setOnClickListener {}
-        bind.cut.setOnClickListener {}
-        bind.four.setOnClickListener {}
-        bind.five.setOnClickListener {}
-        bind.six.setOnClickListener {}
-        bind.mul.setOnClickListener {}
-        bind.div.setOnClickListener {}
-        bind.one.setOnClickListener {}
-        bind.two.setOnClickListener {}
-        bind.plus.setOnClickListener {}
-        bind.minus.setOnClickListener {}
-        bind.mul.setOnClickListener {}
-        bind.zero.setOnClickListener {}
+        bind.three.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "3"
+
+        }
+
+        bind.seven.setOnClickListener {
+            val Const = listOf("1: Dim", "2: LINEIO", "3: DEG", "4: RAD", "5: GRAD", "6: FIX", "7: SCI", "8: NORM")
+            if (shiftkey == 1) {
+
+                showMenuDialog(this, "Constants",Const) { selectedItem ->
+                    shiftkey = 0
+                    bind.btnRad.text = "-"
+                    Toast.makeText(this, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                    val menu = sub_menu_items()
+                    menu.modeClick(this, selectedItem)
+                }
+
+            }
+            else{
+                bind.display.text = bind.display.text.toString() + "7"
+
+
+            }
+        }
+        bind.eight.setOnClickListener {
+            val Conv = listOf("1: Dim", "2: LINEIO", "3: DEG", "4: RAD", "5: GRAD", "6: FIX", "7: SCI", "8: NORM")
+            if (shiftkey == 1) {
+
+                showMenuDialog(this, "Conversion",Conv) { selectedItem ->
+                    shiftkey = 0
+                    bind.btnRad.text = "-"
+                    Toast.makeText(this, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                    val menu = sub_menu_items()
+                    menu.modeClick(this, selectedItem)
+                }
+
+            }
+            else{
+                bind.display.text = bind.display.text.toString() + "8"
+
+
+            }
+
+        }
+        bind.nine.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "9"
+
+        }
+        bind.cut.setOnClickListener {
+            val text = bind.display.text.toString()
+            if (text.isNotEmpty()) {
+                bind.display.text = text.substring(0, text.length - 1)
+            }
+
+        }
+        bind.four.setOnClickListener {
+            val Matrix = listOf("1: Dim", "2: LINEIO", "3: DEG", "4: RAD", "5: GRAD", "6: FIX", "7: SCI", "8: NORM")
+            if (shiftkey == 1) {
+
+                showMenuDialog(this, "Matrix",Matrix) { selectedItem ->
+                    shiftkey = 0
+                    bind.btnRad.text = "-"
+                    Toast.makeText(this, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                    val menu = sub_menu_items()
+                    menu.modeClick(this, selectedItem)
+                }
+
+            }
+            else{
+                bind.display.text = bind.display.text.toString() + "4"
+
+            }
+        }
+        bind.five.setOnClickListener {
+            val Vectors = listOf("1: Dim", "2: LINEIO", "3: DEG", "4: RAD", "5: GRAD", "6: FIX", "7: SCI", "8: NORM")
+            if (shiftkey == 1) {
+
+                showMenuDialog(this, "Vector",Vectors) { selectedItem ->
+                    shiftkey = 0
+                    bind.btnRad.text = "-"
+                    Toast.makeText(this, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                    val menu = sub_menu_items()
+                    menu.modeClick(this, selectedItem)
+                }
+
+            }
+            else{
+                bind.display.text = bind.display.text.toString() + "5"
+
+
+            }
+        }
+        bind.six.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "6"
+
+        }
+        bind.mul.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "x"
+
+
+        }
+        bind.div.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "÷"
+        }
+        bind.one.setOnClickListener {
+            val Stats = listOf("1: Dim", "2: LINEIO", "3: DEG", "4: RAD", "5: GRAD", "6: FIX", "7: SCI", "8: NORM")
+            if (shiftkey == 1) {
+
+                showMenuDialog(this, "Statistics",Stats) { selectedItem ->
+                    shiftkey = 0
+                    bind.btnRad.text = "-"
+                    Toast.makeText(this, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                    val menu = sub_menu_items()
+                    menu.modeClick(this, selectedItem)
+                }
+
+            }
+            else{
+                bind.display.text = bind.display.text.toString() + "1"
+
+            }
+        }
+        bind.two.setOnClickListener {
+            val Cmplx = listOf("1: Dim", "2: LINEIO", "3: DEG", "4: RAD", "5: GRAD", "6: FIX", "7: SCI", "8: NORM")
+            if (shiftkey == 1) {
+
+                showMenuDialog(this, "Complex",Cmplx) { selectedItem ->
+                    shiftkey = 0
+                    bind.btnRad.text = "-"
+                    Toast.makeText(this, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                    val menu = sub_menu_items()
+                    menu.modeClick(this, selectedItem)
+                }
+
+            }
+            else{
+                bind.display.text = bind.display.text.toString() + "2"
+
+            }
+        }
+        bind.plus.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "+"
+
+        }
+        bind.minus.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "-"
+
+
+        }
+
+        bind.zero.setOnClickListener {
+            bind.display.text = bind.display.text.toString() + "0"
+
+
+        }
         bind.dot.setOnClickListener {}
         bind.exp.setOnClickListener {}
         bind.ans.setOnClickListener {}
@@ -127,14 +312,11 @@ class MainActivity : AppCompatActivity() {
         bind.mode.setOnClickListener {
          val modeshiftMenuItems = listOf("1: MTHIO", "2: LINEIO", "3: DEG", "4: RAD", "5: GRAD", "6: FIX", "7: SCI", "8: NORM")
          val modeitems = listOf("1: CMPLX", "2: STAT", "3: BASE_N", "4: TABLE", "5: MATRIX", "6: EQN", "7: VECTOR")
-
-         val items = if (shiftkey == 1) modeshiftMenuItems else modeitems
-
-         showMenuDialog(this, "MODE",items) { selectedItem ->
+            val items = if (shiftkey == 1) modeshiftMenuItems else modeitems
+            showMenuDialog(this, "MODE",items) { selectedItem ->
           shiftkey = 0
           Toast.makeText(this, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
-
-          val menu = sub_menu_items()
+             val menu = sub_menu_items()
           menu.modeClick(this, selectedItem)
          }
         }
